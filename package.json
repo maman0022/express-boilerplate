@@ -9,7 +9,7 @@
     "start": "node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
-    "init": "node init.js && mv sample.env .env && rm -rf ./.git && git init && npm i && rm ./init.js"
+    "init": "mv sample.env .env && rm -rf ./.git && git init && npm i && node init.js && rm ./init.js"
   },
   "keywords": [],
   "author": "",

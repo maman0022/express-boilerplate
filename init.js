@@ -7,5 +7,5 @@ const currDirName = process.env.PWD.split('/');
 let dirName = passedName || currDirName[currDirName.length - 1];
 
 package.name = dirName.toLowerCase();
-
+delete package.scripts.init;
 fs.writeFileSync( './package.json', JSON.stringify(package, null , 2));
